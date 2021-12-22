@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import React, { useState } from 'react';
 
-import { SearchType } from '../index';
-import { SearchContext } from '../SearchContext';
+import React, { useState } from 'react';
+import { SearchType } from '../SearchType';
+import { SearchContext } from '../SearchContext/SearchContext';
 
 export default {
   title: 'Plugins/Search/SearchType',

@@ -16,7 +16,8 @@
 
 import React from 'react';
 import { Grid, Paper } from '@material-ui/core';
-import { SearchFilter, SearchContext } from '../index';
+import { SearchFilter } from '../SearchFilter';
+import { SearchContext } from '../SearchContext/SearchContext';
 import { MemoryRouter } from 'react-router';
 
 export default {

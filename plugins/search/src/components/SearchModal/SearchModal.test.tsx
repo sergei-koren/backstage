@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
 import React from 'react';
 import { screen } from '@testing-library/react';
 import { renderInTestApp, TestApiRegistry } from '@backstage/test-utils';
@@ -21,7 +22,6 @@ import { configApiRef } from '@backstage/core-plugin-api';
 import { ApiProvider, ConfigReader } from '@backstage/core-app-api';
 import { rootRouteRef } from '../../plugin';
 import { searchApiRef } from '../../apis';
-
 import { SearchModal } from './SearchModal';
 
 jest.mock('../SearchContext', () => ({

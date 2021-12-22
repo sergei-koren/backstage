@@ -14,5 +14,4 @@
  * limitations under the License.
  */
 
-export { HomePageSearchBar } from './HomePageSearchBar';
 export type { HomePageSearchBarProps } from './HomePageSearchBar';

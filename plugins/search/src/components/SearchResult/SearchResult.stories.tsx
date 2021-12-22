@@ -16,7 +16,9 @@
 
 import React from 'react';
 import { List, ListItem } from '@material-ui/core';
-import { SearchResult, SearchContext, DefaultResultListItem } from '../index';
+import { SearchResult } from '../SearchResult/SearchResult';
+import { DefaultResultListItem } from '../DefaultResultListItem/DefaultResultListItem';
+import { SearchContext } from '../SearchContext/SearchContext';
 import { MemoryRouter } from 'react-router';
 import { Link } from '@backstage/core-components';
 

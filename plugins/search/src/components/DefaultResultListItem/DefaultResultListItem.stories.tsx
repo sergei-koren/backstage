@@ -19,7 +19,7 @@ import { Grid } from '@material-ui/core';
 import FindInPageIcon from '@material-ui/icons/FindInPage';
 import GroupIcon from '@material-ui/icons/Group';
 import { Button } from '@backstage/core-components';
-import { DefaultResultListItem } from '../index';
+import { DefaultResultListItem } from '../DefaultResultListItem/DefaultResultListItem';
 import { MemoryRouter } from 'react-router';
 
 export default {

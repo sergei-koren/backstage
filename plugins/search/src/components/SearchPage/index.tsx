@@ -14,4 +14,4 @@
  * limitations under the License.
  */
 
-export { SearchPage } from './SearchPage';
+export { SearchPage as Router } from './SearchPage';

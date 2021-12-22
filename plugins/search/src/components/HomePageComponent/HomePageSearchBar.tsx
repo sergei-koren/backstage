@@ -14,10 +14,9 @@
  * limitations under the License.
  */
 
-import React, { useCallback, useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-
-import { SearchBarBase, SearchBarBaseProps } from '../SearchBar';
+import React, { useCallback, useState } from 'react';
+import { SearchBarBase, SearchBarBaseProps } from '../SearchBar/SearchBar';
 import { useNavigateToQuery } from '../util';
 
 const useStyles = makeStyles({
