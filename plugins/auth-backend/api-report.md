@@ -9,6 +9,7 @@ import { CatalogApi } from '@backstage/catalog-client';
 import { Config } from '@backstage/config';
 import { Entity } from '@backstage/catalog-model';
 import express from 'express';
+import { JsonValue } from '@backstage/types';
 import { JSONWebKey } from 'jose';
 import { Logger as Logger_2 } from 'winston';
 import { PluginDatabaseManager } from '@backstage/backend-common';
@@ -233,6 +234,11 @@ export const createBitbucketProvider: (
   options?: BitbucketProviderOptions | undefined,
 ) => AuthProviderFactory;
 
+// @public
+export function createGcpIapProvider(
+  options: GcpIapProviderOptions,
+): AuthProviderFactory;
+
 // Warning: (ae-missing-release-tag) "createGithubProvider" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
 //
 // @public (undocumented)
@@ -313,6 +319,36 @@ export const encodeState: (state: OAuthState) => string;
 //
 // @public (undocumented)
 export const ensuresXRequestedWith: (req: express.Request) => boolean;
+
+// @public
+export type GcpIapProviderOptions = {
+  signIn: {
+    resolver: GcpIapSignInResolver;
+  };
+};
+
+// @public
+export type GcpIapSignInResolver = (
+  info: {
+    iapToken: GcpIapTokenInfo;
+  },
+  context: {
+    tokenIssuer: TokenIssuer;
+    catalogIdentityClient: CatalogIdentityClient;
+    logger: Logger_2;
+  },
+) => Promise<{
+  profile: ProfileInfo;
+  result: BackstageSignInResult;
+  otherProviderInfo?: JsonValue;
+}>;
+
+// @public
+export type GcpIapTokenInfo = {
+  sub: string;
+  email: string;
+  [key: string]: JsonValue;
+};
 
 // Warning: (ae-forgotten-export) The symbol "TokenParams" needs to be exported by the entry point index.d.ts
 // Warning: (ae-missing-release-tag) "getEntityClaims" is exported by the package, but it is missing a release tag (@alpha, @beta, @public, or @internal)
@@ -630,9 +666,9 @@ export type SamlProviderOptions = {
 };
 
 // @public
-export type SignInInfo<AuthResult> = {
+export type SignInInfo<TAuthResult> = {
   profile: ProfileInfo;
-  result: AuthResult;
+  result: TAuthResult;
 };
 
 // @public
