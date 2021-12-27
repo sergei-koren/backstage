@@ -1,5 +1,16 @@
 # @backstage/plugin-scaffolder-backend
 
+## 0.15.19
+
+### Patch Changes
+
+- 7d4b4e937c: Uptake changes to the GitHub Credentials Provider interface.
+- Updated dependencies
+  - @backstage/backend-common@0.10.1
+  - @backstage/plugin-catalog-backend@0.19.4
+  - @backstage/integration@0.7.0
+  - @backstage/plugin-scaffolder-backend-module-cookiecutter@0.1.7
+
 ## 0.15.18
 
 ### Patch Changes

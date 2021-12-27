@@ -1,5 +1,11 @@
 # @backstage/cli
 
+## 0.10.4
+
+### Patch Changes
+
+- 808828e4fa: remove inline CSS from serve_index.html
+
 ## 0.10.3
 
 ### Patch Changes

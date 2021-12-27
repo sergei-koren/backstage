@@ -1,5 +1,13 @@
 # @backstage/backend-common
 
+## 0.10.1
+
+### Patch Changes
+
+- 7d4b4e937c: Uptake changes to the GitHub Credentials Provider interface.
+- Updated dependencies
+  - @backstage/integration@0.7.0
+
 ## 0.10.0
 
 ### Minor Changes

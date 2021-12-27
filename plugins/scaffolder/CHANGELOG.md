@@ -1,5 +1,15 @@
 # @backstage/plugin-scaffolder
 
+## 0.11.16
+
+### Patch Changes
+
+- 7d4b4e937c: Uptake changes to the GitHub Credentials Provider interface.
+- Updated dependencies
+  - @backstage/integration@0.7.0
+  - @backstage/integration-react@0.1.17
+  - @backstage/plugin-catalog-react@0.6.9
+
 ## 0.11.15
 
 ### Patch Changes
