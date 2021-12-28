@@ -12,7 +12,7 @@ workflows:
   sample: # This is the name of the workflow, feel free to change it to better match your workflow.
     # Inside the workflow, you define the jobs you want to run.
     jobs:
-      - node/test:
+      - run:
           # This is the node version to use for the `cimg/node` tag
           # Relevant tags can be found on the CircleCI Developer Hub
           # https://circleci.com/developer/images/image/cimg/node
@@ -20,3 +20,5 @@ workflows:
           version: '14.18.2'
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: yarn
+        
+          
